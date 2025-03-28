@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/arg_mia/static/css/main.b8da0f0b.chunk.css",
+    "main.js": "/arg_mia/static/js/main.a79251f6.chunk.js",
+    "main.js.map": "/arg_mia/static/js/main.a79251f6.chunk.js.map",
+    "runtime~main.js": "/arg_mia/static/js/runtime~main.3c09f5c6.js",
+    "runtime~main.js.map": "/arg_mia/static/js/runtime~main.3c09f5c6.js.map",
+    "static/js/2.ca150098.chunk.js": "/arg_mia/static/js/2.ca150098.chunk.js",
+    "static/js/2.ca150098.chunk.js.map": "/arg_mia/static/js/2.ca150098.chunk.js.map",
+    "static/js/3.940f5f6f.chunk.js": "/arg_mia/static/js/3.940f5f6f.chunk.js",
+    "static/js/3.940f5f6f.chunk.js.map": "/arg_mia/static/js/3.940f5f6f.chunk.js.map",
+    "index.html": "/arg_mia/index.html",
+    "precache-manifest.3ce83f4488f62966d42b3d658c0fdc7e.js": "/arg_mia/precache-manifest.3ce83f4488f62966d42b3d658c0fdc7e.js",
+    "service-worker.js": "/arg_mia/service-worker.js",
+    "static/css/main.b8da0f0b.chunk.css.map": "/arg_mia/static/css/main.b8da0f0b.chunk.css.map"
+  }
+}
