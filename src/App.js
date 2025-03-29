@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-ro
 import './App.css';
 import Login from './components/Login';
 import Admin from './components/Admin';
+import About from './components/About';
+import Products from './components/Products';
 
 // Protected Route component
 function ProtectedRoute({ children }) {
@@ -22,8 +24,8 @@ function Navigation({ showNav, setShowNav }) {
         ☰
       </button>
       <nav className={`nav-bar ${showNav ? 'show' : 'hide'}`}>
-        <div className="nav-item">About</div>
-        <div className="nav-item">Products</div>
+        <Link to="/about" className="nav-item">About</Link>
+        <Link to="/products" className="nav-item">Products</Link>
         <div className="nav-item">Apply</div>
         <div className="nav-item">Support</div>
         <Link to="/login" className="nav-item">Login</Link>
@@ -51,6 +53,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
           <Route 
             path="/x7k9m2p4q8"  //this is a random string to protect admin page
             element={
