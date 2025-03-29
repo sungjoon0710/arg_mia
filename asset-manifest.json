@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/arg_mia/static/css/main.1b063e07.chunk.css",
-    "main.js": "/arg_mia/static/js/main.a8b3db8e.chunk.js",
-    "main.js.map": "/arg_mia/static/js/main.a8b3db8e.chunk.js.map",
-    "runtime~main.js": "/arg_mia/static/js/runtime~main.3c09f5c6.js",
-    "runtime~main.js.map": "/arg_mia/static/js/runtime~main.3c09f5c6.js.map",
-    "static/js/2.ca150098.chunk.js": "/arg_mia/static/js/2.ca150098.chunk.js",
-    "static/js/2.ca150098.chunk.js.map": "/arg_mia/static/js/2.ca150098.chunk.js.map",
-    "static/js/3.940f5f6f.chunk.js": "/arg_mia/static/js/3.940f5f6f.chunk.js",
-    "static/js/3.940f5f6f.chunk.js.map": "/arg_mia/static/js/3.940f5f6f.chunk.js.map",
+    "main.css": "/arg_mia/static/css/main.3424339c.css",
+    "main.js": "/arg_mia/static/js/main.b6206955.js",
+    "static/js/453.6e51b8b9.chunk.js": "/arg_mia/static/js/453.6e51b8b9.chunk.js",
     "index.html": "/arg_mia/index.html",
-    "precache-manifest.bf3d9fc58d0af3c41de094973afdfaa1.js": "/arg_mia/precache-manifest.bf3d9fc58d0af3c41de094973afdfaa1.js",
-    "service-worker.js": "/arg_mia/service-worker.js",
-    "static/css/main.1b063e07.chunk.css.map": "/arg_mia/static/css/main.1b063e07.chunk.css.map"
-  }
+    "main.3424339c.css.map": "/arg_mia/static/css/main.3424339c.css.map",
+    "main.b6206955.js.map": "/arg_mia/static/js/main.b6206955.js.map",
+    "453.6e51b8b9.chunk.js.map": "/arg_mia/static/js/453.6e51b8b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3424339c.css",
+    "static/js/main.b6206955.js"
+  ]
 }
