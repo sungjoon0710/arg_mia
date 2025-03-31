@@ -56,7 +56,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route 
-            path="/x7k9m2p4q8"  //this is a random string to protect admin page
+            path="/admin"
             element={
               <ProtectedRoute>
                 <Admin />
