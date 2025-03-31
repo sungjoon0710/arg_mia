@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import '../App.css';
 
 function Admin() {
   const navigate = useNavigate();
+  const { logout } = useAuth();
 
   const handleLogout = () => {
-    // Clear any stored authentication
-    localStorage.removeItem('isAuthenticated');
+    logout();
     navigate('/');
   };
 
@@ -15,7 +16,7 @@ function Admin() {
     <div className="admin-container">
       <div className="admin-header">
         <h2>Admin Dashboard</h2>
-        <button onClick={handleLogout} className="logout-button">Logout</button>
+        <button onClick={handleLogout} className="admin-logout-button">Logout</button>
       </div>
       <div className="admin-content">
         <h3>Welcome, Administrator</h3>

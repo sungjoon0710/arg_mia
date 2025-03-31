@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import '../App.css';
 
 function Login() {
@@ -7,6 +8,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,8 +16,7 @@ function Login() {
 
     // Check credentials
     if (username === 'admin' && password === '0000') {
-      // Store authentication state
-      localStorage.setItem('isAuthenticated', 'true');
+      login(username);
       navigate('/admin');
     } else {
       setError('Invalid username or password');

@@ -5,12 +5,14 @@ import Login from './components/Login';
 import Admin from './components/Admin';
 import About from './components/About';
 import Products from './components/Products';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import UserBar from './components/UserBar';
 
 // Protected Route component
 function ProtectedRoute({ children }) {
-  const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+  const { user } = useAuth();
   
-  if (!isAuthenticated) {
+  if (!user) {
     return <Navigate to="/login" replace />;
   }
   
@@ -24,11 +26,14 @@ function Navigation({ showNav, setShowNav }) {
         ☰
       </button>
       <nav className={`nav-bar ${showNav ? 'show' : 'hide'}`}>
-        <Link to="/about" className="nav-item">About</Link>
-        <Link to="/products" className="nav-item">Products</Link>
-        <div className="nav-item">Apply</div>
-        <div className="nav-item">Support</div>
-        <Link to="/login" className="nav-item">Login</Link>
+        <div className="nav-links">
+          <Link to="/about" className="nav-item">About</Link>
+          <Link to="/products" className="nav-item">Products</Link>
+          <div className="nav-item">Apply</div>
+          <div className="nav-item">Support</div>
+          <Link to="/login" className="nav-item">Login</Link>
+        </div>
+        <UserBar />
       </nav>
     </>
   );
@@ -47,25 +52,27 @@ function App() {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <Router basename="/arg_mia">
-      <div className="App">
-        <Navigation showNav={showNav} setShowNav={setShowNav} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route 
-            path="/admin"
-            element={
-              <ProtectedRoute>
-                <Admin />
-              </ProtectedRoute>
-            } 
-          />
-        </Routes>
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router basename="/arg_mia">
+        <div className="App">
+          <Navigation showNav={showNav} setShowNav={setShowNav} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route 
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <Admin />
+                </ProtectedRoute>
+              } 
+            />
+          </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
