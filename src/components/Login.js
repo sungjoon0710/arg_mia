@@ -16,7 +16,7 @@ function Login() {
     if (username === 'admin' && password === '0000') {
       // Store authentication state
       localStorage.setItem('isAuthenticated', 'true');
-      navigate('/x7k9m2p4q8');
+      navigate('/admin');
     } else {
       setError('Invalid username or password');
     }
