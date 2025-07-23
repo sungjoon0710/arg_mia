@@ -525,12 +525,11 @@ p {
 }
 
 .folder-name {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-align: center;
   word-wrap: break-word;
   max-width: 80px;
   line-height: 1.4;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
@@ -558,6 +557,20 @@ p {
 
 .folder-item:hover .folder-icon {
   animation: folderHover 0.3s ease-in-out;
+}
+
+.file-item {
+  cursor: default;
+}
+
+.file-item:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.file-item .folder-icon {
+  filter: none;
+  text-shadow: none;
 }
 
 /* Responsive adjustments */

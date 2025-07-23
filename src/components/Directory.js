@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 
 const Directory = () => {
-  const folders = ['a', 'b', 'c'];
+  const folders = ['a', 'B', 'c'];
   const [currentPath, setCurrentPath] = useState('');
 
   const handleFolderClick = (folderName) => {
@@ -31,17 +31,26 @@ const Directory = () => {
                 <span className="folder-name">..</span>
             </div>
             )}
-            {folders.map((folderName, index) => (
+            {currentPath === '/a/B/c' ? (
+              <div className="folder-item file-item">
+                <div className="folder-icon">🖼️</div>
+                <span className="folder-name">cat.jpeg</span>
+              </div>
+            ) : (
+              folders.map((folderName, index) => (
                 <div key={index} className="folder-item" onClick={() => handleFolderClick(folderName)}>
                 <div className="folder-icon">📁</div>
                 <span className="folder-name">{folderName}</span>
                 </div>
-            ))}
+              ))
+            )}
         </div>
       </div>
       
       <div className="directory-footer">
-        <span className="status-text">{folders.length} folders | Ready</span>
+        <span className="status-text">
+          {currentPath === '/a/B/c' ? '1 file | Ready' : `${folders.length} folders | Ready`}
+        </span>
       </div>
     </div>
   );
