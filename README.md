@@ -1,6 +1,6 @@
-# ARG MIA React Frontend
+# ARG MIA React App
 
-This is a basic React frontend structure that can be run locally and deployed to GitHub Pages.
+This is a basic React frontend app that can be run locally and deployed to GitHub Pages.
 
 ## Local Development
 
