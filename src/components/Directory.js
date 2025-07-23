@@ -15,6 +15,16 @@ const Directory = () => {
     setCurrentPath(pathArray.length > 0 ? '/' + pathArray.join('/') : '');
   };
 
+  const handleFileDownload = (fileName) => {
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = `${process.env.PUBLIC_URL}/images/${fileName}`;
+    link.download = fileName; // This sets the download filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="directory-container">
       <div className="directory-header">
@@ -32,9 +42,9 @@ const Directory = () => {
             </div>
             )}
             {currentPath === '/a/B/c' ? (
-              <div className="folder-item file-item">
-                <div className="folder-icon">🖼️</div>
-                <span className="folder-name">cat.jpeg</span>
+              <div className="folder-item file-item" onClick={() => handleFileDownload('cat.png')}>
+                <div className="file-icon">🖼️</div>
+                <span className="file-name">cat.png</span>
               </div>
             ) : (
               folders.map((folderName, index) => (
