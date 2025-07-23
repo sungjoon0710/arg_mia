@@ -446,3 +446,142 @@ p {
 .admin-logout-button:hover {
   background-color: #cc0000;
 } 
+
+/* Retro Directory UI Styles */
+.directory-container {
+  max-width: 100vw;
+  margin: 8rem 5rem;
+  background-color: #c0c0c0;
+  border: 3px outset #c0c0c0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Press Start 2P', cursive;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.directory-header {
+  background: linear-gradient(to bottom, #0080ff, #004080);
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #666;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.directory-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.directory-path {
+  font-size: 0.6rem;
+  color: #cccccc;
+}
+
+.directory-content {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  min-height: 100px;
+  justify-content: center;
+}
+
+.folder-item:hover {
+  background-color: #316ac5;
+  color: white;
+}
+
+.folder-item:active {
+  background-color: #1e4a8c;
+}
+
+.folder-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  filter: hue-rotate(45deg) saturate(1.5) brightness(1.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.folder-name {
+  font-size: 0.6rem;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 80px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.directory-footer {
+  background-color: #c0c0c0;
+  border-top: 1px inset #c0c0c0;
+  padding: 0.3rem 1rem;
+  font-size: 0.6rem;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-text {
+  color: #000;
+}
+
+/* Add some retro-style animations */
+@keyframes folderHover {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1.02); }
+}
+
+.folder-item:hover .folder-icon {
+  animation: folderHover 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .directory-container {
+    margin: 1rem;
+    max-width: none;
+  }
+  
+  .file-list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .folder-icon {
+    font-size: 2.5rem;
+  }
+  
+  .directory-header {
+    font-size: 0.6rem;
+  }
+  
+  .directory-path {
+    font-size: 0.5rem;
+  }
+} 

@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Admin from './components/Admin';
 import About from './components/About';
 import Products from './components/Products';
+import Directory from './components/Directory';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import UserBar from './components/UserBar';
 
@@ -30,7 +31,7 @@ function Navigation({ showNav, setShowNav }) {
           <Link to="/about" className="nav-item">About</Link>
           <Link to="/products" className="nav-item">Products</Link>
           <div className="nav-item">Apply</div>
-          <div className="nav-item">Support</div>
+          <Link to="/directory" className="nav-item">Directory</Link>
           <Link to="/login" className="nav-item">Login</Link>
         </div>
         <UserBar />
@@ -61,6 +62,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/directory" element={<Directory />} />
             <Route 
               path="/admin"
               element={
