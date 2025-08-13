@@ -47,7 +47,7 @@ const Directory = () => {
       <div className="file-icon">🖼️</div>
       <span className="file-name">chat1.png</span>
     </div>
-    <div className="folder-item file-item" onClick={() => handleFileDownload('unknown.txt')}>
+    <div className="folder-item file-item" onClick={() => handleFileDownload('1.txt')}>
       <div className="file-icon">📄</div>
       <span className="file-name">1.txt</span>
     </div>
@@ -58,7 +58,7 @@ const Directory = () => {
       <div className="file-icon">🖼️</div>
       <span className="file-name">chat2.png</span>
     </div>
-    <div className="folder-item file-item" onClick={() => handleFileDownload('unknown.txt')}>
+    <div className="folder-item file-item" onClick={() => handleFileDownload('2.txt')}>
       <div className="file-icon">📄</div>
       <span className="file-name">2.txt</span>
     </div>
@@ -69,7 +69,7 @@ const Directory = () => {
       <div className="file-icon">🖼️</div>
       <span className="file-name">chat3.png</span>
     </div>
-    <div className="folder-item file-item" onClick={() => handleFileDownload('unknown.txt')}>
+    <div className="folder-item file-item" onClick={() => handleFileDownload('3.txt')}>
       <div className="file-icon">📄</div>
       <span className="file-name">3.txt</span>
     </div>
@@ -80,7 +80,7 @@ const Directory = () => {
       <div className="file-icon">🖼️</div>
       <span className="file-name">chat4.png</span>
     </div>
-    <div className="folder-item file-item" onClick={() => handleFileDownload('unknown.txt')}>
+    <div className="folder-item file-item" onClick={() => handleFileDownload('4.txt')}>
       <div className="file-icon">📄</div>
       <span className="file-name">4.txt</span>
     </div>
@@ -91,7 +91,7 @@ const Directory = () => {
       <div className="file-icon">🖼️</div>
       <span className="file-name">chat5.png</span>
     </div>
-    <div className="folder-item file-item" onClick={() => handleFileDownload('unknown.txt')}>
+    <div className="folder-item file-item" onClick={() => handleFileDownload('5.txt')}>
       <div className="file-icon">📄</div>
       <span className="file-name">5.txt</span>
     </div>
