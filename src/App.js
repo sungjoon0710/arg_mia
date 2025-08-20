@@ -54,7 +54,7 @@ function App() {
 
   return (
     <AuthProvider>
-      <Router basename="/arg_mia">
+      <Router>
         <div className="App">
           <Navigation showNav={showNav} setShowNav={setShowNav} />
           <Routes>

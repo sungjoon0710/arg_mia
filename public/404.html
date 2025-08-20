@@ -5,9 +5,9 @@
     <title>ARG MIA</title>
     <script>
       // Store the path and redirect to index.html with the path as a parameter
-      const path = window.location.pathname.replace('/arg_mia', '');
+      const path = window.location.pathname;
       const query = window.location.search;
-      window.location.replace('/arg_mia/?redirect=' + encodeURIComponent(path + query));
+      window.location.replace('/?redirect=' + encodeURIComponent(path + query));
     </script>
   </head>
   <body>

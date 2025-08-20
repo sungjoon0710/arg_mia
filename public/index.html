@@ -24,7 +24,7 @@
         const redirect = params.get('redirect');
         if (redirect) {
           // Remove the redirect parameter and navigate to the original path
-          window.history.replaceState({}, '', '/arg_mia' + redirect);
+          window.history.replaceState({}, '', redirect);
         }
       })();
     </script>
