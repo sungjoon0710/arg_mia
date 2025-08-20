@@ -28,7 +28,7 @@ npm install --save-dev gh-pages
 npm run deploy
 ```
 
-The application will be available at [https://sungjoon0710.github.io/arg_mia](https://sungjoon0710.github.io/arg_mia).
+The application will be available at [https://www.miai.dev](https://www.miai.dev).
 
 ## Project Structure
 
