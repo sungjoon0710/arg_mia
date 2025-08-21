@@ -8,6 +8,7 @@ import Products from './components/Products';
 import Directory from './components/Directory';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import UserBar from './components/UserBar';
+import Game from './components/Game';
 
 // Protected Route component
 function ProtectedRoute({ children }) {
@@ -30,7 +31,7 @@ function Navigation({ showNav, setShowNav }) {
         <div className="nav-links">
           <Link to="/about" className="nav-item">About</Link>
           <Link to="/products" className="nav-item">Products</Link>
-          <div className="nav-item">Apply</div>
+          <Link to="/game" className="nav-item">Game</Link>
           <Link to="/directory" className="nav-item">Directory</Link>
           <Link to="/login" className="nav-item">Login</Link>
         </div>
@@ -63,6 +64,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/directory" element={<Directory />} />
+            <Route path="/game" element={<Game />} />
             <Route 
               path="/admin"
               element={
