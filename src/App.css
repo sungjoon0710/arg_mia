@@ -605,6 +605,20 @@ p {
   color: #333;
 }
 
+.game-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+.game-content {
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  font-family: 'Press Start 2P', cursive;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .directory-container {
